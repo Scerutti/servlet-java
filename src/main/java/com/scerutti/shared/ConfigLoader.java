@@ -6,9 +6,6 @@ import java.util.Properties;
 
 public class ConfigLoader {
     private static final Properties props = new Properties();
-    private
-
-    private ConfigLoader(){}
 
     static {
         try (InputStream input = ConfigLoader.class.getClassLoader().getResourceAsStream("config.properties")) {
@@ -24,4 +21,6 @@ public class ConfigLoader {
     public static String get(String key) {
         return props.getProperty(key);
     }
+
+    private ConfigLoader(){}
 }
